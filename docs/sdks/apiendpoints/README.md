@@ -1,0 +1,336 @@
+# ApiEndpoints
+(*apiEndpoints*)
+
+## Overview
+
+REST APIs for managing ApiEndpoint entities
+
+### Available Operations
+
+* [deleteApiEndpoint](#deleteapiendpoint) - Delete an ApiEndpoint.
+* [findApiEndpoint](#findapiendpoint) - Find an ApiEndpoint via its displayName.
+* [generateOpenApiSpecForApiEndpoint](#generateopenapispecforapiendpoint) - Generate an OpenAPI specification for a particular ApiEndpoint.
+* [generatePostmanCollectionForApiEndpoint](#generatepostmancollectionforapiendpoint) - Generate a Postman collection for a particular ApiEndpoint.
+* [getAllApiEndpoints](#getallapiendpoints) - Get all Api endpoints for a particular apiID.
+* [getAllForVersionApiEndpoints](#getallforversionapiendpoints) - Get all ApiEndpoints for a particular apiID and versionID.
+* [getApiEndpoint](#getapiendpoint) - Get an ApiEndpoint.
+* [upsertApiEndpoint](#upsertapiendpoint) - Upsert an ApiEndpoint.
+
+## deleteApiEndpoint
+
+Delete an ApiEndpoint. This will also delete all associated Request Logs (if using a Postgres datastore).
+
+### Example Usage
+
+```typescript
+import { SpeakeasyAPI } from "Speakeasy-API";
+
+(async() => {
+  const sdk = new SpeakeasyAPI({
+    apiKey: "",
+  });
+
+  const res = await sdk.apiEndpoints.deleteApiEndpoint({
+    apiEndpointID: "bus Gasoline Southwest",
+    apiID: "candela",
+    versionID: "indexing maxime bypassing",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.DeleteApiEndpointRequest](../../models/operations/deleteapiendpointrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `config`                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                               | :heavy_minus_sign:                                                                         | Available config options for making requests.                                              |
+
+
+### Response
+
+**Promise<[operations.DeleteApiEndpointResponse](../../models/operations/deleteapiendpointresponse.md)>**
+
+
+## findApiEndpoint
+
+Find an ApiEndpoint via its displayName (set by operationId from a registered OpenAPI schema).
+This is useful for finding the ID of an ApiEndpoint to use in the /v1/apis/{apiID}/version/{versionID}/api_endpoints/{apiEndpointID} endpoints.
+
+### Example Usage
+
+```typescript
+import { SpeakeasyAPI } from "Speakeasy-API";
+
+(async() => {
+  const sdk = new SpeakeasyAPI({
+    apiKey: "",
+  });
+
+  const res = await sdk.apiEndpoints.findApiEndpoint({
+    apiID: "insignificant",
+    displayName: "payment",
+    versionID: "Highland North Awesome",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.FindApiEndpointRequest](../../models/operations/findapiendpointrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `config`                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                           | :heavy_minus_sign:                                                                     | Available config options for making requests.                                          |
+
+
+### Response
+
+**Promise<[operations.FindApiEndpointResponse](../../models/operations/findapiendpointresponse.md)>**
+
+
+## generateOpenApiSpecForApiEndpoint
+
+This endpoint will generate a new operation in any registered OpenAPI document if the operation does not already exist in the document.
+Returns the original document and the newly generated document allowing a diff to be performed to see what has changed.
+
+### Example Usage
+
+```typescript
+import { SpeakeasyAPI } from "Speakeasy-API";
+
+(async() => {
+  const sdk = new SpeakeasyAPI({
+    apiKey: "",
+  });
+
+  const res = await sdk.apiEndpoints.generateOpenApiSpecForApiEndpoint({
+    apiEndpointID: "Tactics ew explicabo",
+    apiID: "gray act",
+    versionID: "bah",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
+
+### Parameters
+
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [operations.GenerateOpenApiSpecForApiEndpointRequest](../../models/operations/generateopenapispecforapiendpointrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
+
+
+### Response
+
+**Promise<[operations.GenerateOpenApiSpecForApiEndpointResponse](../../models/operations/generateopenapispecforapiendpointresponse.md)>**
+
+
+## generatePostmanCollectionForApiEndpoint
+
+Generates a postman collection that allows the endpoint to be called from postman variables produced for any path/query/header parameters included in the OpenAPI document.
+
+### Example Usage
+
+```typescript
+import { SpeakeasyAPI } from "Speakeasy-API";
+
+(async() => {
+  const sdk = new SpeakeasyAPI({
+    apiKey: "",
+  });
+
+  const res = await sdk.apiEndpoints.generatePostmanCollectionForApiEndpoint({
+    apiEndpointID: "silver Bronze Outdoors",
+    apiID: "Virtual admirable Southeast",
+    versionID: "Northeast Bicycle mark",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
+
+### Parameters
+
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [operations.GeneratePostmanCollectionForApiEndpointRequest](../../models/operations/generatepostmancollectionforapiendpointrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
+
+
+### Response
+
+**Promise<[operations.GeneratePostmanCollectionForApiEndpointResponse](../../models/operations/generatepostmancollectionforapiendpointresponse.md)>**
+
+
+## getAllApiEndpoints
+
+Get all Api endpoints for a particular apiID.
+
+### Example Usage
+
+```typescript
+import { SpeakeasyAPI } from "Speakeasy-API";
+
+(async() => {
+  const sdk = new SpeakeasyAPI({
+    apiKey: "",
+  });
+
+  const res = await sdk.apiEndpoints.getAllApiEndpoints({
+    apiID: "Director JSON candela",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.GetAllApiEndpointsRequest](../../models/operations/getallapiendpointsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
+
+
+### Response
+
+**Promise<[operations.GetAllApiEndpointsResponse](../../models/operations/getallapiendpointsresponse.md)>**
+
+
+## getAllForVersionApiEndpoints
+
+Get all ApiEndpoints for a particular apiID and versionID.
+
+### Example Usage
+
+```typescript
+import { SpeakeasyAPI } from "Speakeasy-API";
+
+(async() => {
+  const sdk = new SpeakeasyAPI({
+    apiKey: "",
+  });
+
+  const res = await sdk.apiEndpoints.getAllForVersionApiEndpoints({
+    apiID: "THX Tuna sparkling",
+    versionID: "Assurance",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
+
+### Parameters
+
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [operations.GetAllForVersionApiEndpointsRequest](../../models/operations/getallforversionapiendpointsrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
+
+
+### Response
+
+**Promise<[operations.GetAllForVersionApiEndpointsResponse](../../models/operations/getallforversionapiendpointsresponse.md)>**
+
+
+## getApiEndpoint
+
+Get an ApiEndpoint.
+
+### Example Usage
+
+```typescript
+import { SpeakeasyAPI } from "Speakeasy-API";
+
+(async() => {
+  const sdk = new SpeakeasyAPI({
+    apiKey: "",
+  });
+
+  const res = await sdk.apiEndpoints.getApiEndpoint({
+    apiEndpointID: "Optimized male SSD",
+    apiID: "Soul Land",
+    versionID: "Androgyne Hydrogen",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetApiEndpointRequest](../../models/operations/getapiendpointrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
+
+
+### Response
+
+**Promise<[operations.GetApiEndpointResponse](../../models/operations/getapiendpointresponse.md)>**
+
+
+## upsertApiEndpoint
+
+Upsert an ApiEndpoint. If the ApiEndpoint does not exist it will be created, otherwise it will be updated.
+
+### Example Usage
+
+```typescript
+import { SpeakeasyAPI } from "Speakeasy-API";
+
+(async() => {
+  const sdk = new SpeakeasyAPI({
+    apiKey: "",
+  });
+
+  const res = await sdk.apiEndpoints.upsertApiEndpoint({
+    apiEndpointInput: {
+      apiEndpointId: "Convertible Turner Cotton",
+      description: "Triple-buffered optimal methodology",
+      displayName: "Langosh Northwest Mabelle",
+      method: "South",
+      path: "/rescue",
+      versionId: "East Land viral",
+    },
+    apiEndpointID: "Electric Operations systems",
+    apiID: "Operations East Unbranded",
+    versionID: "parsing Convertible",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.UpsertApiEndpointRequest](../../models/operations/upsertapiendpointrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `config`                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                               | :heavy_minus_sign:                                                                         | Available config options for making requests.                                              |
+
+
+### Response
+
+**Promise<[operations.UpsertApiEndpointResponse](../../models/operations/upsertapiendpointresponse.md)>**
+
