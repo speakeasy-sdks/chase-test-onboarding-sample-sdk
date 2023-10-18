@@ -7,15 +7,15 @@
 </div>
 
 <!-- Start SDK Installation -->
-# SDK Installation
+## SDK Installation
 
-## NPM
+### NPM
 
 ```bash
 npm add https://github.com/speakeasy-sdks/chase-test-onboarding-sample-sdk
 ```
 
-## Yarn
+### Yarn
 
 ```bash
 yarn add https://github.com/speakeasy-sdks/chase-test-onboarding-sample-sdk
@@ -24,8 +24,6 @@ yarn add https://github.com/speakeasy-sdks/chase-test-onboarding-sample-sdk
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
@@ -52,10 +50,10 @@ import { SpeakeasyAPI } from "Speakeasy-API";
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-# Available Resources and Operations
+## Available Resources and Operations
 
 
-## [apiEndpoints](docs/sdks/apiendpoints/README.md)
+### [apiEndpoints](docs/sdks/apiendpoints/README.md)
 
 * [deleteApiEndpoint](docs/sdks/apiendpoints/README.md#deleteapiendpoint) - Delete an ApiEndpoint.
 * [findApiEndpoint](docs/sdks/apiendpoints/README.md#findapiendpoint) - Find an ApiEndpoint via its displayName.
@@ -66,7 +64,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
 * [getApiEndpoint](docs/sdks/apiendpoints/README.md#getapiendpoint) - Get an ApiEndpoint.
 * [upsertApiEndpoint](docs/sdks/apiendpoints/README.md#upsertapiendpoint) - Upsert an ApiEndpoint.
 
-## [apis](docs/sdks/apis/README.md)
+### [apis](docs/sdks/apis/README.md)
 
 * [deleteApi](docs/sdks/apis/README.md#deleteapi) - Delete an Api.
 * [generateOpenApiSpec](docs/sdks/apis/README.md#generateopenapispec) - Generate an OpenAPI specification for a particular Api.
@@ -75,25 +73,25 @@ import { SpeakeasyAPI } from "Speakeasy-API";
 * [getApis](docs/sdks/apis/README.md#getapis) - Get a list of Apis for a given workspace
 * [upsertApi](docs/sdks/apis/README.md#upsertapi) - Upsert an Api
 
-## [embeds](docs/sdks/embeds/README.md)
+### [embeds](docs/sdks/embeds/README.md)
 
 * [getEmbedAccessToken](docs/sdks/embeds/README.md#getembedaccesstoken) - Get an embed access token for the current workspace.
 * [getValidEmbedAccessTokens](docs/sdks/embeds/README.md#getvalidembedaccesstokens) - Get all valid embed access tokens for the current workspace.
 * [revokeEmbedAccessToken](docs/sdks/embeds/README.md#revokeembedaccesstoken) - Revoke an embed access EmbedToken.
 
-## [metadata](docs/sdks/metadata/README.md)
+### [metadata](docs/sdks/metadata/README.md)
 
 * [deleteVersionMetadata](docs/sdks/metadata/README.md#deleteversionmetadata) - Delete metadata for a particular apiID and versionID.
 * [getVersionMetadata](docs/sdks/metadata/README.md#getversionmetadata) - Get all metadata for a particular apiID and versionID.
 * [insertVersionMetadata](docs/sdks/metadata/README.md#insertversionmetadata) - Insert metadata for a particular apiID and versionID.
 
-## [requests](docs/sdks/requests/README.md)
+### [requests](docs/sdks/requests/README.md)
 
 * [generateRequestPostmanCollection](docs/sdks/requests/README.md#generaterequestpostmancollection) - Generate a Postman collection for a particular request.
 * [getRequestFromEventLog](docs/sdks/requests/README.md#getrequestfromeventlog) - Get information about a particular request.
 * [queryEventLog](docs/sdks/requests/README.md#queryeventlog) - Query the event log to retrieve a list of requests.
 
-## [schemas](docs/sdks/schemas/README.md)
+### [schemas](docs/sdks/schemas/README.md)
 
 * [deleteSchema](docs/sdks/schemas/README.md#deleteschema) - Delete a particular schema revision for an Api.
 * [downloadSchema](docs/sdks/schemas/README.md#downloadschema) - Download the latest schema for a particular apiID.
@@ -106,8 +104,6 @@ import { SpeakeasyAPI } from "Speakeasy-API";
 <!-- End SDK Available Operations -->
 
 <!-- Start Dev Containers -->
-
-
 
 <!-- End Dev Containers -->
 

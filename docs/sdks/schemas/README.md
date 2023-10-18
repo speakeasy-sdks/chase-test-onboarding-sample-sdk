@@ -31,9 +31,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.schemas.deleteSchema({
-    apiID: "Hybrid",
-    revisionID: "Funk Garden Specialist",
-    versionID: "male",
+    apiID: "West",
+    revisionID: "Tricycle",
+    versionID: "Funk",
   });
 
   if (res.statusCode == 200) {
@@ -70,8 +70,8 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.schemas.downloadSchema({
-    apiID: "Specialist correctly",
-    versionID: "customer Exclusive oof",
+    apiID: "SMTP",
+    versionID: "North",
   });
 
   if (res.statusCode == 200) {
@@ -108,9 +108,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.schemas.downloadSchemaRevision({
-    apiID: "Belarus hacking firewall",
-    revisionID: "Coupe affidavit Cheese",
-    versionID: "pink deposit",
+    apiID: "Cargo",
+    revisionID: "hacking",
+    versionID: "firewall",
   });
 
   if (res.statusCode == 200) {
@@ -148,8 +148,8 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.schemas.getSchema({
-    apiID: "Assistant",
-    versionID: "banter Cotton withdrawal",
+    apiID: "Handcrafted",
+    versionID: "Hybrid",
   });
 
   if (res.statusCode == 200) {
@@ -186,10 +186,10 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.schemas.getSchemaDiff({
-    apiID: "Tuna",
-    baseRevisionID: "South Van",
-    targetRevisionID: "whoever",
-    versionID: "henry Tulare",
+    apiID: "North",
+    baseRevisionID: "Central",
+    targetRevisionID: "South",
+    versionID: "Van",
   });
 
   if (res.statusCode == 200) {
@@ -227,9 +227,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.schemas.getSchemaRevision({
-    apiID: "Mauritius",
-    revisionID: "West Rustic Plastic",
-    versionID: "Yttrium Loan",
+    apiID: "City",
+    revisionID: "web",
+    versionID: "sternly",
   });
 
   if (res.statusCode == 200) {
@@ -267,8 +267,8 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.schemas.getSchemas({
-    apiID: "white",
-    versionID: "optical round",
+    apiID: "indigo",
+    versionID: "Fantastic",
   });
 
   if (res.statusCode == 200) {
@@ -309,11 +309,11 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     requestBody: {
       file: {
         content: "mg|mf\".]!\" as bytes <<<>>>,
-        file: "Bronze Table Blues",
+        file: "Avon",
       },
     },
-    apiID: "Oganesson",
-    versionID: "matrix Pennsylvania Southeast",
+    apiID: "Pants",
+    versionID: "Table",
   });
 
   if (res.statusCode == 200) {

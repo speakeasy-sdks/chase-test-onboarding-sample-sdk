@@ -31,13 +31,13 @@ import { SpeakeasyAPI } from "Speakeasy-API";
       filters: [
         {
           key: "<key>",
-          operator: "Northeast compress Account",
-          value: "unless to frame",
+          operator: "along",
+          value: "quos",
         },
       ],
-      limit: 792058,
-      offset: 425010,
-      operator: "kilogram innovative Virginia",
+      limit: 263313,
+      offset: 411277,
+      operator: "male",
     },
   });
 
@@ -109,7 +109,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.embeds.revokeEmbedAccessToken({
-    tokenID: "Small",
+    tokenID: "Ball",
   });
 
   if (res.statusCode == 200) {
