@@ -29,8 +29,8 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.apis.deleteApi({
-    apiID: "plaintive",
-    versionID: "THX",
+    apiID: "string",
+    versionID: "string",
   });
 
   if (res.statusCode == 200) {
@@ -68,8 +68,8 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.apis.generateOpenApiSpec({
-    apiID: "fixed",
-    versionID: "bandwidth",
+    apiID: "string",
+    versionID: "string",
   });
 
   if (res.statusCode == 200) {
@@ -106,8 +106,8 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.apis.generatePostmanCollection({
-    apiID: "Paradigm",
-    versionID: "olive",
+    apiID: "string",
+    versionID: "string",
   });
 
   if (res.statusCode == 200) {
@@ -145,10 +145,10 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.apis.getAllApiVersions({
-    apiID: "azure",
+    apiID: "string",
     metadata: {
-      "enhance": [
-        "Garrison",
+      "key": [
+        "string",
       ],
     },
     op: {
@@ -192,8 +192,8 @@ import { SpeakeasyAPI } from "Speakeasy-API";
 
   const res = await sdk.apis.getApis({
     metadata: {
-      "South": [
-        "Southwest",
+      "key": [
+        "string",
       ],
     },
     op: {
@@ -237,16 +237,16 @@ import { SpeakeasyAPI } from "Speakeasy-API";
 
   const res = await sdk.apis.upsertApi({
     apiInput: {
-      apiId: "Van",
-      description: "Front-line zero defect algorithm",
+      apiId: "string",
+      description: "Synchronised 5th generation knowledge user",
       metaData: {
-        "Balanced": [
-          "West",
+        "key": [
+          "string",
         ],
       },
-      versionId: "pixel",
+      versionId: "string",
     },
-    apiID: "Buckinghamshire",
+    apiID: "string",
   });
 
   if (res.statusCode == 200) {

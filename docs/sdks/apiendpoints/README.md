@@ -31,9 +31,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.apiEndpoints.deleteApiEndpoint({
-    apiEndpointID: "blue",
-    apiID: "Gasoline",
-    versionID: "Southwest",
+    apiEndpointID: "string",
+    apiID: "string",
+    versionID: "string",
   });
 
   if (res.statusCode == 200) {
@@ -71,9 +71,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.apiEndpoints.findApiEndpoint({
-    apiID: "Cotton",
-    displayName: "Chief",
-    versionID: "Wooden",
+    apiID: "string",
+    displayName: "string",
+    versionID: "string",
   });
 
   if (res.statusCode == 200) {
@@ -111,9 +111,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.apiEndpoints.generateOpenApiSpecForApiEndpoint({
-    apiEndpointID: "Mazda",
-    apiID: "web",
-    versionID: "explicabo",
+    apiEndpointID: "string",
+    apiID: "string",
+    versionID: "string",
   });
 
   if (res.statusCode == 200) {
@@ -150,9 +150,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.apiEndpoints.generatePostmanCollectionForApiEndpoint({
-    apiEndpointID: "indigo",
-    apiID: "barring",
-    versionID: "Senior",
+    apiEndpointID: "string",
+    apiID: "string",
+    versionID: "string",
   });
 
   if (res.statusCode == 200) {
@@ -189,7 +189,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.apiEndpoints.getAllApiEndpoints({
-    apiID: "unless",
+    apiID: "string",
   });
 
   if (res.statusCode == 200) {
@@ -226,8 +226,8 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.apiEndpoints.getAllForVersionApiEndpoints({
-    apiID: "now",
-    versionID: "Diesel",
+    apiID: "string",
+    versionID: "string",
   });
 
   if (res.statusCode == 200) {
@@ -264,9 +264,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.apiEndpoints.getApiEndpoint({
-    apiEndpointID: "flog",
-    apiID: "synthesize",
-    versionID: "Barium",
+    apiEndpointID: "string",
+    apiID: "string",
+    versionID: "string",
   });
 
   if (res.statusCode == 200) {
@@ -304,16 +304,16 @@ import { SpeakeasyAPI } from "Speakeasy-API";
 
   const res = await sdk.apiEndpoints.upsertApiEndpoint({
     apiEndpointInput: {
-      apiEndpointId: "Facilitator",
-      description: "Cross-group bottom-line productivity",
-      displayName: "nor",
-      method: "Northwest",
-      path: "/private",
-      versionId: "what",
+      apiEndpointId: "string",
+      description: "Public-key systematic attitude",
+      displayName: "string",
+      method: "string",
+      path: "/etc/periodic",
+      versionId: "string",
     },
-    apiEndpointID: "Trans",
-    apiID: "Kia",
-    versionID: "Electronic",
+    apiEndpointID: "string",
+    apiID: "string",
+    versionID: "string",
   });
 
   if (res.statusCode == 200) {

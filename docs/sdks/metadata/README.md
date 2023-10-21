@@ -26,10 +26,10 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.metadata.deleteVersionMetadata({
-    apiID: "Hydrogen",
-    metaKey: "Cargo",
-    metaValue: "Minnetonka",
-    versionID: "communities",
+    apiID: "string",
+    metaKey: "string",
+    metaValue: "string",
+    versionID: "string",
   });
 
   if (res.statusCode == 200) {
@@ -66,8 +66,8 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.metadata.getVersionMetadata({
-    apiID: "Bronze",
-    versionID: "Buckinghamshire",
+    apiID: "string",
+    versionID: "string",
   });
 
   if (res.statusCode == 200) {
@@ -105,11 +105,11 @@ import { SpeakeasyAPI } from "Speakeasy-API";
 
   const res = await sdk.metadata.insertVersionMetadata({
     versionMetadataInput: {
-      metaKey: "Borders",
-      metaValue: "Potassium",
+      metaKey: "string",
+      metaValue: "string",
     },
-    apiID: "Bedfordshire",
-    versionID: "Dram",
+    apiID: "string",
+    versionID: "string",
   });
 
   if (res.statusCode == 200) {

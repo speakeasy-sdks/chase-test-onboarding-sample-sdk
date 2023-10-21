@@ -31,13 +31,13 @@ import { SpeakeasyAPI } from "Speakeasy-API";
       filters: [
         {
           key: "<key>",
-          operator: "along",
-          value: "quos",
+          operator: "string",
+          value: "string",
         },
       ],
-      limit: 263313,
-      offset: 411277,
-      operator: "male",
+      limit: 964408,
+      offset: 95617,
+      operator: "string",
     },
   });
 
@@ -109,7 +109,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.embeds.revokeEmbedAccessToken({
-    tokenID: "Ball",
+    tokenID: "string",
   });
 
   if (res.statusCode == 200) {

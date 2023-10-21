@@ -2,29 +2,32 @@ configVersion: 1.0.0
 management:
   docChecksum: 8e8183d84cace76310a3208e63cd7855
   docVersion: 0.1.0
-  speakeasyVersion: 1.101.0
-  generationVersion: 2.161.0
+  speakeasyVersion: 1.104.0
+  generationVersion: 2.169.0
 generation:
   comments:
     disableComments: false
     omitDescriptionIfSummaryPresent: false
   baseServerURL: ""
+  repoURL: https://github.com/speakeasy-sdks/chase-test-onboarding-sample-sdk.git
   sdkClassName: Speakeasy-API
   singleTagPerOp: false
   tagNamespacingDisabled: false
 features:
   typescript:
     acceptHeaders: 2.81.1
-    core: 2.90.4
+    core: 2.93.0
     examples: 2.81.3
     globalSecurity: 2.82.0
     globalServerURLs: 2.82.0
     inputOutputModels: 2.81.1
     serverIDs: 2.81.1
 typescript:
-  version: 0.1.1
+  version: 0.2.0
   author: chase-test-onboarding
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
+  installationURL: https://github.com/speakeasy-sdks/chase-test-onboarding-sample-sdk
   maxMethodParams: 0
   packageName: Speakeasy-API
+  repoSubDirectory: .

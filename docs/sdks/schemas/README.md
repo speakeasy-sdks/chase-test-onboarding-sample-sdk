@@ -31,9 +31,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.schemas.deleteSchema({
-    apiID: "West",
-    revisionID: "Tricycle",
-    versionID: "Funk",
+    apiID: "string",
+    revisionID: "string",
+    versionID: "string",
   });
 
   if (res.statusCode == 200) {
@@ -70,8 +70,8 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.schemas.downloadSchema({
-    apiID: "SMTP",
-    versionID: "North",
+    apiID: "string",
+    versionID: "string",
   });
 
   if (res.statusCode == 200) {
@@ -108,9 +108,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.schemas.downloadSchemaRevision({
-    apiID: "Cargo",
-    revisionID: "hacking",
-    versionID: "firewall",
+    apiID: "string",
+    revisionID: "string",
+    versionID: "string",
   });
 
   if (res.statusCode == 200) {
@@ -148,8 +148,8 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.schemas.getSchema({
-    apiID: "Handcrafted",
-    versionID: "Hybrid",
+    apiID: "string",
+    versionID: "string",
   });
 
   if (res.statusCode == 200) {
@@ -186,10 +186,10 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.schemas.getSchemaDiff({
-    apiID: "North",
-    baseRevisionID: "Central",
-    targetRevisionID: "South",
-    versionID: "Van",
+    apiID: "string",
+    baseRevisionID: "string",
+    targetRevisionID: "string",
+    versionID: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,9 +227,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.schemas.getSchemaRevision({
-    apiID: "City",
-    revisionID: "web",
-    versionID: "sternly",
+    apiID: "string",
+    revisionID: "string",
+    versionID: "string",
   });
 
   if (res.statusCode == 200) {
@@ -267,8 +267,8 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.schemas.getSchemas({
-    apiID: "indigo",
-    versionID: "Fantastic",
+    apiID: "string",
+    versionID: "string",
   });
 
   if (res.statusCode == 200) {
@@ -309,11 +309,11 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     requestBody: {
       file: {
         content: "mg|mf\".]!\" as bytes <<<>>>,
-        file: "Avon",
+        file: "string",
       },
     },
-    apiID: "Pants",
-    versionID: "Table",
+    apiID: "string",
+    versionID: "string",
   });
 
   if (res.statusCode == 200) {
