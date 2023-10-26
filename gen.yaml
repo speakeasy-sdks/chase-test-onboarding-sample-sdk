@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: 8e8183d84cace76310a3208e63cd7855
   docVersion: 0.1.0
-  speakeasyVersion: 1.107.0
-  generationVersion: 2.171.0
+  speakeasyVersion: 1.108.0
+  generationVersion: 2.172.0
 generation:
   comments:
     disableComments: false
@@ -21,9 +21,9 @@ features:
     globalSecurity: 2.82.0
     globalServerURLs: 2.82.0
     inputOutputModels: 2.81.1
-    serverIDs: 2.81.1
+    serverIDs: 2.81.2
 typescript:
-  version: 0.3.0
+  version: 0.3.1
   author: chase-test-onboarding
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
