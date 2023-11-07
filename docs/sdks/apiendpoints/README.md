@@ -1,5 +1,5 @@
 # ApiEndpoints
-(*apiEndpoints*)
+(*.apiEndpoints*)
 
 ## Overview
 
@@ -35,6 +35,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     apiID: "string",
     versionID: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -76,6 +77,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     versionID: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -116,6 +118,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     versionID: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -155,6 +158,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     versionID: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -191,6 +195,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   const res = await sdk.apiEndpoints.getAllApiEndpoints({
     apiID: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -229,6 +234,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     apiID: "string",
     versionID: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -269,6 +275,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     versionID: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -303,7 +310,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.apiEndpoints.upsertApiEndpoint({
-    apiEndpointInput: {
+    apiEndpoint: {
       apiEndpointId: "string",
       description: "Public-key systematic attitude",
       displayName: "string",
@@ -315,6 +322,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     apiID: "string",
     versionID: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

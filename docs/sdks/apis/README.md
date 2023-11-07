@@ -1,5 +1,5 @@
 # Apis
-(*apis*)
+(*.apis*)
 
 ## Overview
 
@@ -32,6 +32,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     apiID: "string",
     versionID: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -72,6 +73,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     versionID: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -109,6 +111,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     apiID: "string",
     versionID: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -156,6 +159,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     },
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -201,6 +205,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     },
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -236,7 +241,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.apis.upsertApi({
-    apiInput: {
+    api: {
       apiId: "string",
       description: "Synchronised 5th generation knowledge user",
       metaData: {
@@ -248,6 +253,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     },
     apiID: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

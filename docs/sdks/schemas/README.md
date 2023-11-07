@@ -1,5 +1,5 @@
 # Schemas
-(*schemas*)
+(*.schemas*)
 
 ## Overview
 
@@ -35,6 +35,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     revisionID: "string",
     versionID: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -73,6 +74,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     apiID: "string",
     versionID: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -113,6 +115,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     versionID: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -151,6 +154,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     apiID: "string",
     versionID: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -192,6 +196,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     versionID: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -232,6 +237,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     versionID: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -271,6 +277,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     versionID: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -308,13 +315,14 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   const res = await sdk.schemas.registerSchema({
     requestBody: {
       file: {
-        content: "mg|mf\".]!\" as bytes <<<>>>,
-        file: "string",
+        content: new TextEncoder().encode("0xCAFCA03e0e"),
+        fileName: "bronze_table_blues.m2a",
       },
     },
     apiID: "string",
     versionID: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

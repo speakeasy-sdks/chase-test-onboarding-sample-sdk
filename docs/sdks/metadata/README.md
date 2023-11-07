@@ -1,5 +1,5 @@
 # Metadata
-(*metadata*)
+(*.metadata*)
 
 ## Overview
 
@@ -31,6 +31,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     metaValue: "string",
     versionID: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -70,6 +71,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     versionID: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -104,13 +106,14 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.metadata.insertVersionMetadata({
-    versionMetadataInput: {
+    versionMetadata: {
       metaKey: "string",
       metaValue: "string",
     },
     apiID: "string",
     versionID: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

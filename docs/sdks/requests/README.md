@@ -1,5 +1,5 @@
 # Requests
-(*requests*)
+(*.requests*)
 
 ## Overview
 
@@ -29,6 +29,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   const res = await sdk.requests.generateRequestPostmanCollection({
     requestID: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -66,6 +67,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   const res = await sdk.requests.getRequestFromEventLog({
     requestID: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -115,6 +117,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
       operator: "string",
     },
   });
+
 
   if (res.statusCode == 200) {
     // handle response

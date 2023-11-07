@@ -53,7 +53,16 @@ import { SpeakeasyAPI } from "Speakeasy-API";
 ## Available Resources and Operations
 
 
-### [apiEndpoints](docs/sdks/apiendpoints/README.md)
+### [.apis](docs/sdks/apis/README.md)
+
+* [deleteApi](docs/sdks/apis/README.md#deleteapi) - Delete an Api.
+* [generateOpenApiSpec](docs/sdks/apis/README.md#generateopenapispec) - Generate an OpenAPI specification for a particular Api.
+* [generatePostmanCollection](docs/sdks/apis/README.md#generatepostmancollection) - Generate a Postman collection for a particular Api.
+* [getAllApiVersions](docs/sdks/apis/README.md#getallapiversions) - Get all Api versions for a particular ApiEndpoint.
+* [getApis](docs/sdks/apis/README.md#getapis) - Get a list of Apis for a given workspace
+* [upsertApi](docs/sdks/apis/README.md#upsertapi) - Upsert an Api
+
+### [.apiEndpoints](docs/sdks/apiendpoints/README.md)
 
 * [deleteApiEndpoint](docs/sdks/apiendpoints/README.md#deleteapiendpoint) - Delete an ApiEndpoint.
 * [findApiEndpoint](docs/sdks/apiendpoints/README.md#findapiendpoint) - Find an ApiEndpoint via its displayName.
@@ -64,34 +73,13 @@ import { SpeakeasyAPI } from "Speakeasy-API";
 * [getApiEndpoint](docs/sdks/apiendpoints/README.md#getapiendpoint) - Get an ApiEndpoint.
 * [upsertApiEndpoint](docs/sdks/apiendpoints/README.md#upsertapiendpoint) - Upsert an ApiEndpoint.
 
-### [apis](docs/sdks/apis/README.md)
-
-* [deleteApi](docs/sdks/apis/README.md#deleteapi) - Delete an Api.
-* [generateOpenApiSpec](docs/sdks/apis/README.md#generateopenapispec) - Generate an OpenAPI specification for a particular Api.
-* [generatePostmanCollection](docs/sdks/apis/README.md#generatepostmancollection) - Generate a Postman collection for a particular Api.
-* [getAllApiVersions](docs/sdks/apis/README.md#getallapiversions) - Get all Api versions for a particular ApiEndpoint.
-* [getApis](docs/sdks/apis/README.md#getapis) - Get a list of Apis for a given workspace
-* [upsertApi](docs/sdks/apis/README.md#upsertapi) - Upsert an Api
-
-### [embeds](docs/sdks/embeds/README.md)
-
-* [getEmbedAccessToken](docs/sdks/embeds/README.md#getembedaccesstoken) - Get an embed access token for the current workspace.
-* [getValidEmbedAccessTokens](docs/sdks/embeds/README.md#getvalidembedaccesstokens) - Get all valid embed access tokens for the current workspace.
-* [revokeEmbedAccessToken](docs/sdks/embeds/README.md#revokeembedaccesstoken) - Revoke an embed access EmbedToken.
-
-### [metadata](docs/sdks/metadata/README.md)
+### [.metadata](docs/sdks/metadata/README.md)
 
 * [deleteVersionMetadata](docs/sdks/metadata/README.md#deleteversionmetadata) - Delete metadata for a particular apiID and versionID.
 * [getVersionMetadata](docs/sdks/metadata/README.md#getversionmetadata) - Get all metadata for a particular apiID and versionID.
 * [insertVersionMetadata](docs/sdks/metadata/README.md#insertversionmetadata) - Insert metadata for a particular apiID and versionID.
 
-### [requests](docs/sdks/requests/README.md)
-
-* [generateRequestPostmanCollection](docs/sdks/requests/README.md#generaterequestpostmancollection) - Generate a Postman collection for a particular request.
-* [getRequestFromEventLog](docs/sdks/requests/README.md#getrequestfromeventlog) - Get information about a particular request.
-* [queryEventLog](docs/sdks/requests/README.md#queryeventlog) - Query the event log to retrieve a list of requests.
-
-### [schemas](docs/sdks/schemas/README.md)
+### [.schemas](docs/sdks/schemas/README.md)
 
 * [deleteSchema](docs/sdks/schemas/README.md#deleteschema) - Delete a particular schema revision for an Api.
 * [downloadSchema](docs/sdks/schemas/README.md#downloadschema) - Download the latest schema for a particular apiID.
@@ -101,6 +89,18 @@ import { SpeakeasyAPI } from "Speakeasy-API";
 * [getSchemaRevision](docs/sdks/schemas/README.md#getschemarevision) - Get information about a particular schema revision for an Api.
 * [getSchemas](docs/sdks/schemas/README.md#getschemas) - Get information about all schemas associated with a particular apiID.
 * [registerSchema](docs/sdks/schemas/README.md#registerschema) - Register a schema.
+
+### [.requests](docs/sdks/requests/README.md)
+
+* [generateRequestPostmanCollection](docs/sdks/requests/README.md#generaterequestpostmancollection) - Generate a Postman collection for a particular request.
+* [getRequestFromEventLog](docs/sdks/requests/README.md#getrequestfromeventlog) - Get information about a particular request.
+* [queryEventLog](docs/sdks/requests/README.md#queryeventlog) - Query the event log to retrieve a list of requests.
+
+### [.embeds](docs/sdks/embeds/README.md)
+
+* [getEmbedAccessToken](docs/sdks/embeds/README.md#getembedaccesstoken) - Get an embed access token for the current workspace.
+* [getValidEmbedAccessTokens](docs/sdks/embeds/README.md#getvalidembedaccesstokens) - Get all valid embed access tokens for the current workspace.
+* [revokeEmbedAccessToken](docs/sdks/embeds/README.md#revokeembedaccesstoken) - Revoke an embed access EmbedToken.
 <!-- End SDK Available Operations -->
 
 <!-- Start Dev Containers -->
@@ -113,8 +113,6 @@ import { SpeakeasyAPI } from "Speakeasy-API";
 # Error Handling
 
 Handling errors in your SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
-
-
 <!-- End Error Handling -->
 
 
@@ -138,9 +136,107 @@ const httpClient = axios.create({
 
 const sdk = new SpeakeasyAPI({defaultClient: httpClient});
 ```
-
-
 <!-- End Custom HTTP Client -->
+
+
+
+<!-- Start Server Selection -->
+# Server Selection
+
+## Select Server by Name
+
+You can override the default server globally by passing a server name to the `server: string` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the names associated with the available servers:
+
+| Name | Server | Variables |
+| ----- | ------ | --------- |
+| `prod` | `https://api.prod.speakeasyapi.dev` | None |
+
+For example:
+
+```typescript
+import { SpeakeasyAPI } from "Speakeasy-API";
+
+(async () => {
+    const sdk = new SpeakeasyAPI({
+        server: "prod",
+        apiKey: "",
+    });
+
+    const res = await sdk.apis.deleteApi({
+        apiID: "string",
+        versionID: "string",
+    });
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+})();
+
+```
+
+
+## Override Server URL Per-Client
+
+The default server can also be overridden globally by passing a URL to the `serverURL: str` optional parameter when initializing the SDK client instance. For example:
+
+```typescript
+import { SpeakeasyAPI } from "Speakeasy-API";
+
+(async () => {
+    const sdk = new SpeakeasyAPI({
+        serverURL: "https://api.prod.speakeasyapi.dev",
+        apiKey: "",
+    });
+
+    const res = await sdk.apis.deleteApi({
+        apiID: "string",
+        versionID: "string",
+    });
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+})();
+
+```
+<!-- End Server Selection -->
+
+
+
+<!-- Start Authentication -->
+
+# Authentication
+
+## Per-Client Security Schemes
+
+Your SDK supports the following security scheme globally:
+
+| Name     | Type     | Scheme   |
+| -------- | -------- | -------- |
+| `apiKey` | apiKey   | API key  |
+
+To authenticate with the API the `apiKey` parameter must be set when initializing the SDK client instance. For example:
+
+```typescript
+import { SpeakeasyAPI } from "Speakeasy-API";
+
+(async () => {
+    const sdk = new SpeakeasyAPI({
+        apiKey: "",
+    });
+
+    const res = await sdk.apis.deleteApi({
+        apiID: "string",
+        versionID: "string",
+    });
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+})();
+
+```
+<!-- End Authentication -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

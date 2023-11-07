@@ -1,5 +1,5 @@
 # Embeds
-(*embeds*)
+(*.embeds*)
 
 ## Overview
 
@@ -41,6 +41,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     },
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -75,6 +76,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   });
 
   const res = await sdk.embeds.getValidEmbedAccessTokens();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -111,6 +113,7 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   const res = await sdk.embeds.revokeEmbedAccessToken({
     tokenID: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

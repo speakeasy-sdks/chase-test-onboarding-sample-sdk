@@ -3,11 +3,11 @@
  */
 
 import * as utils from "../internal/utils";
+import * as shared from "../sdk/models/shared";
 import { ApiEndpoints } from "./apiendpoints";
 import { Apis } from "./apis";
 import { Embeds } from "./embeds";
 import { Metadata } from "./metadata";
-import * as shared from "./models/shared";
 import { Requests } from "./requests";
 import { Schemas } from "./schemas";
 import axios from "axios";
@@ -54,9 +54,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "0.1.0";
-    sdkVersion = "0.3.1";
-    genVersion = "2.172.0";
-    userAgent = "speakeasy-sdk/typescript 0.3.1 2.172.0 0.1.0 Speakeasy-API";
+    sdkVersion = "0.4.0";
+    genVersion = "2.181.1";
+    userAgent = "speakeasy-sdk/typescript 0.4.0 2.181.1 0.1.0 Speakeasy-API";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -70,29 +70,29 @@ export class SDKConfiguration {
  */
 export class SpeakeasyAPI {
     /**
-     * REST APIs for managing ApiEndpoint entities
-     */
-    public apiEndpoints: ApiEndpoints;
-    /**
      * REST APIs for managing Api entities
      */
     public apis: Apis;
     /**
-     * REST APIs for managing embeds
+     * REST APIs for managing ApiEndpoint entities
      */
-    public embeds: Embeds;
+    public apiEndpoints: ApiEndpoints;
     /**
      * REST APIs for managing Version Metadata entities
      */
     public metadata: Metadata;
     /**
+     * REST APIs for managing Schema entities
+     */
+    public schemas: Schemas;
+    /**
      * REST APIs for retrieving request information
      */
     public requests: Requests;
     /**
-     * REST APIs for managing Schema entities
+     * REST APIs for managing embeds
      */
-    public schemas: Schemas;
+    public embeds: Embeds;
 
     private sdkConfiguration: SDKConfiguration;
 
@@ -113,11 +113,11 @@ export class SpeakeasyAPI {
             retryConfig: props?.retryConfig,
         });
 
-        this.apiEndpoints = new ApiEndpoints(this.sdkConfiguration);
         this.apis = new Apis(this.sdkConfiguration);
-        this.embeds = new Embeds(this.sdkConfiguration);
+        this.apiEndpoints = new ApiEndpoints(this.sdkConfiguration);
         this.metadata = new Metadata(this.sdkConfiguration);
-        this.requests = new Requests(this.sdkConfiguration);
         this.schemas = new Schemas(this.sdkConfiguration);
+        this.requests = new Requests(this.sdkConfiguration);
+        this.embeds = new Embeds(this.sdkConfiguration);
     }
 }
