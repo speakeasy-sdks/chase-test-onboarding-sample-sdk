@@ -1,5 +1,5 @@
 # Embeds
-(*.embeds*)
+(*embeds*)
 
 ## Overview
 
@@ -41,7 +41,6 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     },
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -50,16 +49,20 @@ import { SpeakeasyAPI } from "Speakeasy-API";
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.GetEmbedAccessTokenRequest](../../models/operations/getembedaccesstokenrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.GetEmbedAccessTokenRequest](../../sdk/models/operations/getembedaccesstokenrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
 
 
 ### Response
 
-**Promise<[operations.GetEmbedAccessTokenResponse](../../models/operations/getembedaccesstokenresponse.md)>**
+**Promise<[operations.GetEmbedAccessTokenResponse](../../sdk/models/operations/getembedaccesstokenresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getValidEmbedAccessTokens
 
@@ -77,7 +80,6 @@ import { SpeakeasyAPI } from "Speakeasy-API";
 
   const res = await sdk.embeds.getValidEmbedAccessTokens();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -93,8 +95,12 @@ import { SpeakeasyAPI } from "Speakeasy-API";
 
 ### Response
 
-**Promise<[operations.GetValidEmbedAccessTokensResponse](../../models/operations/getvalidembedaccesstokensresponse.md)>**
+**Promise<[operations.GetValidEmbedAccessTokensResponse](../../sdk/models/operations/getvalidembedaccesstokensresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## revokeEmbedAccessToken
 
@@ -114,7 +120,6 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     tokenID: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -123,13 +128,17 @@ import { SpeakeasyAPI } from "Speakeasy-API";
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.RevokeEmbedAccessTokenRequest](../../models/operations/revokeembedaccesstokenrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.RevokeEmbedAccessTokenRequest](../../sdk/models/operations/revokeembedaccesstokenrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `config`                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                             | :heavy_minus_sign:                                                                                       | Available config options for making requests.                                                            |
 
 
 ### Response
 
-**Promise<[operations.RevokeEmbedAccessTokenResponse](../../models/operations/revokeembedaccesstokenresponse.md)>**
+**Promise<[operations.RevokeEmbedAccessTokenResponse](../../sdk/models/operations/revokeembedaccesstokenresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
