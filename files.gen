@@ -75,7 +75,6 @@ src/sdk/models/shared/security.ts
 src/sdk/models/errors/index.ts
 src/sdk/models/operations/index.ts
 src/sdk/models/shared/index.ts
-USAGE.md
 docs/sdk/models/operations/deleteapirequest.md
 docs/sdk/models/operations/deleteapiresponse.md
 docs/sdk/models/operations/generateopenapispecrequest.md
@@ -166,4 +165,5 @@ docs/sdks/metadata/README.md
 docs/sdks/schemas/README.md
 docs/sdks/requests/README.md
 docs/sdks/embeds/README.md
+USAGE.md
 .gitattributes

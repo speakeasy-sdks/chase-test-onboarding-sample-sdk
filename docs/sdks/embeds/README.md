@@ -21,9 +21,9 @@ Filters can be applied allowing views to be filtered to things like particular c
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.embeds.getEmbedAccessToken({
@@ -44,7 +44,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -73,9 +75,9 @@ Get all valid embed access tokens for the current workspace.
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.embeds.getValidEmbedAccessTokens();
@@ -83,7 +85,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -111,9 +115,9 @@ Revoke an embed access EmbedToken.
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.embeds.revokeEmbedAccessToken({
@@ -123,7 +127,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

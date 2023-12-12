@@ -20,9 +20,9 @@ Delete metadata for a particular apiID and versionID.
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.metadata.deleteVersionMetadata({
@@ -35,7 +35,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -64,9 +66,9 @@ Get all metadata for a particular apiID and versionID.
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.metadata.getVersionMetadata({
@@ -77,7 +79,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -106,9 +110,9 @@ Insert metadata for a particular apiID and versionID.
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.metadata.insertVersionMetadata({
@@ -123,7 +127,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

@@ -25,9 +25,9 @@ Delete an ApiEndpoint. This will also delete all associated Request Logs (if usi
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.apiEndpoints.deleteApiEndpoint({
@@ -39,7 +39,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -69,9 +71,9 @@ This is useful for finding the ID of an ApiEndpoint to use in the /v1/apis/{apiI
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.apiEndpoints.findApiEndpoint({
@@ -83,7 +85,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -113,9 +117,9 @@ Returns the original document and the newly generated document allowing a diff t
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.apiEndpoints.generateOpenApiSpecForApiEndpoint({
@@ -127,7 +131,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -156,9 +162,9 @@ Generates a postman collection that allows the endpoint to be called from postma
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.apiEndpoints.generatePostmanCollectionForApiEndpoint({
@@ -170,7 +176,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -199,9 +207,9 @@ Get all Api endpoints for a particular apiID.
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.apiEndpoints.getAllApiEndpoints({
@@ -211,7 +219,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -240,9 +250,9 @@ Get all ApiEndpoints for a particular apiID and versionID.
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.apiEndpoints.getAllForVersionApiEndpoints({
@@ -253,7 +263,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -282,9 +294,9 @@ Get an ApiEndpoint.
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.apiEndpoints.getApiEndpoint({
@@ -296,7 +308,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -325,9 +339,9 @@ Upsert an ApiEndpoint. If the ApiEndpoint does not exist it will be created, oth
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.apiEndpoints.upsertApiEndpoint({
@@ -347,7 +361,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

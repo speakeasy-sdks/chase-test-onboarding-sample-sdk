@@ -1,10 +1,10 @@
-<!-- Start SDK Example Usage -->
+<!-- Start SDK Example Usage [usage] -->
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async () => {
+async function run() {
     const sdk = new SpeakeasyAPI({
-        apiKey: "",
+        apiKey: "<YOUR_API_KEY_HERE>",
     });
 
     const res = await sdk.apis.getApis({
@@ -19,7 +19,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->

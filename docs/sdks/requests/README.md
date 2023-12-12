@@ -21,9 +21,9 @@ Allowing it to be replayed with the same inputs that were captured by the SDK.
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.requests.generateRequestPostmanCollection({
@@ -33,7 +33,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -62,9 +64,9 @@ Get information about a particular request.
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.requests.getRequestFromEventLog({
@@ -74,7 +76,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -104,9 +108,9 @@ Allows the filtering of requests on a number of criteria such as ApiID, VersionI
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.requests.queryEventLog({
@@ -127,7 +131,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

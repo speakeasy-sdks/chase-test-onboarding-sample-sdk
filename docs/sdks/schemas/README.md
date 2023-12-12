@@ -25,9 +25,9 @@ Delete a particular schema revision for an Api.
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.schemas.deleteSchema({
@@ -39,7 +39,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -68,9 +70,9 @@ Download the latest schema for a particular apiID.
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.schemas.downloadSchema({
@@ -81,7 +83,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -110,9 +114,9 @@ Download a particular schema revision for an Api.
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.schemas.downloadSchemaRevision({
@@ -124,7 +128,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -154,9 +160,9 @@ This won't include the schema itself, that can be retrieved via the downloadSche
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.schemas.getSchema({
@@ -167,7 +173,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -196,9 +204,9 @@ Get a diff of two schema revisions for an Api.
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.schemas.getSchemaDiff({
@@ -211,7 +219,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -241,9 +251,9 @@ This won't include the schema itself, that can be retrieved via the downloadSche
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.schemas.getSchemaRevision({
@@ -255,7 +265,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -285,9 +297,9 @@ This won't include the schemas themselves, they can be retrieved via the downloa
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.schemas.getSchemas({
@@ -298,7 +310,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -328,9 +342,9 @@ This will be used to populate ApiEndpoints and used as a base for any schema gen
 ```typescript
 import { SpeakeasyAPI } from "Speakeasy-API";
 
-(async() => {
+async function run() {
   const sdk = new SpeakeasyAPI({
-    apiKey: "",
+    apiKey: "<YOUR_API_KEY_HERE>",
   });
 
   const res = await sdk.schemas.registerSchema({
@@ -347,7 +361,9 @@ import { SpeakeasyAPI } from "Speakeasy-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
