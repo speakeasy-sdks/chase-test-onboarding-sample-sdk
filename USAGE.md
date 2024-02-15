@@ -9,7 +9,7 @@ async function run() {
 
     const res = await sdk.apis.getApis({
         metadata: {
-            key: ["string"],
+            key: ["<value>"],
         },
         op: {
             and: false,

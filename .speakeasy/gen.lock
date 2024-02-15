@@ -4,16 +4,16 @@ management:
   docChecksum: 8e8183d84cace76310a3208e63cd7855
   docVersion: 0.1.0
   speakeasyVersion: internal
-  generationVersion: 2.225.2
-  releaseVersion: 0.7.0
-  configChecksum: eb8a21dffe6d5ec15e5e5d05db2c4eb5
+  generationVersion: 2.258.2
+  releaseVersion: 0.7.1
+  configChecksum: a144ac1778186990906c118da0961ffb
   repoURL: https://github.com/speakeasy-sdks/chase-test-onboarding-sample-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/chase-test-onboarding-sample-sdk
 features:
   typescript:
     acceptHeaders: 2.81.1
-    core: 3.4.1
+    core: 3.4.7
     examples: 2.81.3
     globalSecurity: 2.82.2
     globalServerURLs: 2.82.1

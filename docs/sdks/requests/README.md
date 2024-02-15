@@ -27,7 +27,7 @@ async function run() {
   });
 
   const res = await sdk.requests.generateRequestPostmanCollection({
-    requestID: "string",
+    requestID: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -70,7 +70,7 @@ async function run() {
   });
 
   const res = await sdk.requests.getRequestFromEventLog({
-    requestID: "string",
+    requestID: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -118,13 +118,13 @@ async function run() {
       filters: [
         {
           key: "<key>",
-          operator: "string",
-          value: "string",
+          operator: "<value>",
+          value: "<value>",
         },
       ],
       limit: 241978,
       offset: 451388,
-      operator: "string",
+      operator: "<value>",
     },
   });
 

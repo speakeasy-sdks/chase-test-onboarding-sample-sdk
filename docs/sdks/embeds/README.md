@@ -31,13 +31,13 @@ async function run() {
       filters: [
         {
           key: "<key>",
-          operator: "string",
-          value: "string",
+          operator: "<value>",
+          value: "<value>",
         },
       ],
       limit: 964408,
       offset: 95617,
-      operator: "string",
+      operator: "<value>",
     },
   });
 
@@ -121,7 +121,7 @@ async function run() {
   });
 
   const res = await sdk.embeds.revokeEmbedAccessToken({
-    tokenID: "string",
+    tokenID: "<value>",
   });
 
   if (res.statusCode == 200) {

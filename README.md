@@ -37,7 +37,7 @@ async function run() {
 
     const res = await sdk.apis.getApis({
         metadata: {
-            key: ["string"],
+            key: ["<value>"],
         },
         op: {
             and: false,
@@ -131,8 +131,8 @@ async function run() {
     let res;
     try {
         res = await sdk.apis.deleteApi({
-            apiID: "string",
-            versionID: "string",
+            apiID: "<value>",
+            versionID: "<value>",
         });
     } catch (err) {
         if (err instanceof errors.SDKError) {
@@ -197,8 +197,8 @@ async function run() {
     });
 
     const res = await sdk.apis.deleteApi({
-        apiID: "string",
-        versionID: "string",
+        apiID: "<value>",
+        versionID: "<value>",
     });
 
     if (res.statusCode == 200) {
@@ -224,8 +224,8 @@ async function run() {
     });
 
     const res = await sdk.apis.deleteApi({
-        apiID: "string",
-        versionID: "string",
+        apiID: "<value>",
+        versionID: "<value>",
     });
 
     if (res.statusCode == 200) {
@@ -261,8 +261,8 @@ async function run() {
     });
 
     const res = await sdk.apis.deleteApi({
-        apiID: "string",
-        versionID: "string",
+        apiID: "<value>",
+        versionID: "<value>",
     });
 
     if (res.statusCode == 200) {

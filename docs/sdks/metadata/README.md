@@ -26,10 +26,10 @@ async function run() {
   });
 
   const res = await sdk.metadata.deleteVersionMetadata({
-    apiID: "string",
-    metaKey: "string",
-    metaValue: "string",
-    versionID: "string",
+    apiID: "<value>",
+    metaKey: "<value>",
+    metaValue: "<value>",
+    versionID: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -72,8 +72,8 @@ async function run() {
   });
 
   const res = await sdk.metadata.getVersionMetadata({
-    apiID: "string",
-    versionID: "string",
+    apiID: "<value>",
+    versionID: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -117,11 +117,11 @@ async function run() {
 
   const res = await sdk.metadata.insertVersionMetadata({
     versionMetadata: {
-      metaKey: "string",
-      metaValue: "string",
+      metaKey: "<value>",
+      metaValue: "<value>",
     },
-    apiID: "string",
-    versionID: "string",
+    apiID: "<value>",
+    versionID: "<value>",
   });
 
   if (res.statusCode == 200) {
