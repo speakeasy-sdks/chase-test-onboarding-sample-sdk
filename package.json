@@ -1,6 +1,6 @@
 {
   "name": "Speakeasy-API",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "author": "chase-test-onboarding",
   "scripts": {
     "prepare": "tsc --build",
